@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/ionic.css">
+    <!--    NOTE: jQuery hotlink should be fixed before production-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    /* jQuery test */
+    // $(document).ready(function(){
+    //     if (jQuery) {  
+    //       // jQuery is loaded  
+    //       alert("Yeah!");
+    //     } else {
+    //       // jQuery is not loaded
+    //       alert("Doesn't Work");
+    //     }
+    //   });
+
+    var data_from_ajax;
+
+    $.get('http://172.20.21.106/phonegap/database/jsontest.php', function(data) {
+      data_from_ajax = data;
+      console.log(data_from_ajax);
+      alert(data);
+      alert(data_from_ajax);
+    });
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <p> test </p>
+</body>
+
+</html>
